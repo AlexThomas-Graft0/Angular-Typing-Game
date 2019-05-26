@@ -1,0 +1,14 @@
+div {
+  margin: 5px;
+}
+span {
+  padding: 5px;
+}
+
+.highlight {
+  background-color: lightblue;
+}
+
+.error {
+  color: red;
+}

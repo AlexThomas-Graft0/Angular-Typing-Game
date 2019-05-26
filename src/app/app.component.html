@@ -1,0 +1,48 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+	<h1>
+		{{ title }}!
+	</h1>
+
+	<!-- <h4>Score: {{score}}</h4> -->
+	<div>
+		<span *ngFor="let word of sentence; index as i" [ngClass]="{highlight:index==i}">{{word}} </span>
+	</div>
+	<div>
+		<input [value]=" userInput" (keyup)="checkWord($event, $event.target.value, index)">
+	</div>
+	<div>
+		<span class="error">{{errorMessage}}</span>
+	</div>
+
+	<div class="results">
+		<div>
+			<span>Sentence length: {{sentence.length}}</span>
+		</div>
+
+		<div>
+			<span> Possible mistakes: {{possibleMistakes}}</span>
+		</div>
+
+		<div>
+			<span> Correct: {{correct}}</span>
+		</div>
+
+		<div>
+			<span> Errors: {{errors}}</span>
+		</div>
+
+		<div>
+			<span>Time taken: {{timeTaken}} seconds</span>
+		</div>
+
+		<div>
+			<span>Words per minute: {{WPM}}</span>
+		</div>
+
+		<div>
+			<span>accuracy: {{accuracy}}</span>
+		</div>
+	</div>
+
+</div>
